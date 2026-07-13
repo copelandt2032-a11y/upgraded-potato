@@ -1,0 +1,12 @@
+{
+  "metadata": { "name": "Neon Dawn", "bpm": 138 },
+  "entities": [
+    { "type": "spike", "x": 1400 },
+    { "type": "block", "x": 2350, "w": 54, "h": 54 },
+    { "type": "pad", "x": 3470 }
+  ]
+}
+// Damped shake
+shake = Math.max(0, shake - dt * 20);
+// Apply in draw loop
+const shakeX = Math.sin(Date.now() * 0.1) * shake;
